@@ -1,0 +1,40 @@
+{
+  "name": "prisma_cloudflare",
+  "version": "0.2.1",
+  "private": true,
+  "repository": "https://github.com/becem-gharbi/prisma-cloudflare.git",
+  "homepage": "https://prisma-cloudflare.bg.tn",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "release": "npm run lint && npm run typecheck && changelogen --release && git push --follow-tags",
+    "lint": "eslint .",
+    "typecheck": "nuxi typecheck",
+    "migrate:generate": "node prisma/scripts/migrate_generate.mjs",
+    "migrate:apply": "node prisma/scripts/migrate_apply.mjs"
+  },
+  "devDependencies": {
+    "@bg-dev/nuxt-auth": "3.0.2",
+    "@bg-dev/nuxt-naiveui": "2.0.0-rc.1",
+    "@nuxt/devtools": "^1.1.5",
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/ua-parser-js": "^0.7.39",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.57.0",
+    "nitro-cloudflare-dev": "^0.1.4",
+    "nuxt": "^3.11.1",
+    "prisma": "^5.21.0",
+    "toml": "^3.0.0",
+    "wrangler": "^3.48.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-d1": "^5.21.0",
+    "@prisma/client": "5.21.0",
+    "ua-parser-js": "^1.0.37"
+  },
+  "packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
+}
